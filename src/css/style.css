@@ -2,7 +2,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #111;
-    color: #999;
+    color: #aaa;
 }
 
 h1 {
@@ -23,30 +23,39 @@ header {
 nav {
     grid-area: nav;
     text-align: center;
+
 }
 
-nav ul {
+nav ul, ul {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
     list-style: none;
-    padding-left: 3vw;
+    padding: 3vw;
     padding-bottom:0.5vh;
     border-bottom: 1px solid #333;
 }
 
-nav li {
+nav li, li {
     display: inline;
-    margin: 0;
-    padding: 5px;
+    margin: 1vw 1vh;
+    padding: 1vh;
     box-sizing: content-box;
     cursor: pointer;
+    border: solid 2px #1f1f1f;
+    background-color: #1f1f1f;
+
 }
 
-nav li:hover {
+nav li:hover, li {
     color: #AAA;
-    background-color: #555;
+    background-color: #666;
 }
 
-nav a {
+nav a , a{
     text-decoration: none;
+    font-size: 1.2em;
+    color: #999;
 }
 
 #main {
@@ -55,8 +64,4 @@ nav a {
 
 p {
     font-size: 1.1em;
-}
-
-.bio {
-
 }
