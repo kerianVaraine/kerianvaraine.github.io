@@ -6,13 +6,59 @@ body {
 }
 
 h1 {
-color: #AAA;}
+color: #AAA;
+}
+
+h3 {
+    color:#AAA;
+    font-size: 1.6em;
+    font-weight: 200;
+}
+
+h4 {
+    margin: 1em;
+    color:#BBB;
+    font-size: 1.4em;
+    font-weight: 200;
+    text-decoration: underline;
+    text-indent: 2em;
+    font-style: italic ;
+}
+
+p {
+    font-size: 1.3em;
+}
+
+blockquote {
+    font-size: 1.5em;
+    padding: 1% 2%;
+    margin: 0em 1.3em;
+    background: #222;
+}
+
+hr {
+    border: 5px solid green;
+    border-radius: 5px;
+}
+
+
 
 .container {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: min-content;
-    grid-template-areas: "header" "nav";
+    grid-template-areas:    "header"
+                            "main"
+                            "nav";
+}
+
+@media (min-width: 700px){
+    .container {
+        grid-template-columns: 20% 1fr 15%;
+        grid-template-areas: "header main"
+                             "nav main"
+                                "- main";
+    }
 }
 
 header {
@@ -44,7 +90,6 @@ nav li, li {
     cursor: pointer;
     border: solid 2px #1f1f1f;
     background-color: #1f1f1f;
-
 }
 
 nav li:hover, li {
@@ -60,9 +105,37 @@ nav a , a{
 }
 
 #main {
+    grid-area: main;
+    text-align:left;
     padding: 5vw;
 }
+#main li {
+    display: inline;
+    margin: 1vw 1vh;
+    padding: 1vh;
+    background: #222;
+    border: 1px solid #444 ;
+    border-radius: 10px;
+}
+#main li:hover {
+    color: #AAA;
+    background-color: #666;
+}
 
-p {
-    font-size: 1.1em;
+#notes ul {
+    padding-top: 0;
+    margin-top:0 ;
+}
+
+#notes li {
+    display: inline;
+    font-size: 1.3em;
+    margin: 0;
+    padding: 7px;
+    background: transparent;
+    border: none;
+}
+#notes li:hover {
+    cursor:default;
+    background-color: transparent;
 }
